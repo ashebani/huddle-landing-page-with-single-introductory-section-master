@@ -1,0 +1,182 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-Magenta: hsl(300, 69%, 71%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background-image: url(images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--violet);
+  padding: 3em 5em;
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+}
+
+main {
+  color: white;
+  display: grid;
+  grid-template-columns: 58% 40%;
+  gap: 3em;
+  padding-top: 4em;
+}
+
+.text-part {
+  padding-top: 3em;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.6em;
+}
+p {
+  padding-top: 1em;
+  font-size: 1.2em;
+}
+
+.btn {
+  margin-top: 2em;
+  border-radius: 3em;
+  padding: 0.7em 4em;
+  border: none;
+  color: var(--violet);
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+}
+
+.mockup img {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  align-self: self-end;
+  justify-self: flex-end;
+  gap: 1em;
+}
+
+footer > * {
+  border-radius: 100%;
+  border: 1px solid white;
+  padding: 6px;
+  width: 1.4em;
+  box-sizing: unset;
+}
+
+.btn:hover {
+  background-color: var(--soft-Magenta);
+  color: white;
+  cursor: pointer;
+}
+
+footer img:hover {
+  filter: sepia(20000%) saturate(1680%) hue-rotate(260deg) brightness(100%)
+    contrast(100%);
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  main {
+    display: block;
+    text-align: center;
+  }
+
+  body {
+    background-image: url(images/bg-mobile.svg);
+    padding: 2em;
+    gap: 2em;
+    display: grid;
+  }
+
+  footer {
+    align-self: unset;
+    padding: 2em;
+    justify-self: center;
+  }
+
+  header img {
+    width: 60%;
+    max-width: 250px;
+  }
+  header {
+    padding: 0;
+  }
+  main {
+    padding: 0px;
+    padding-top: 1.6em;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  .btn {
+    width: 60%;
+  }
+  main section img {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .text-part {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
