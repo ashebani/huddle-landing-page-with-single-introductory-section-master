@@ -78,7 +78,7 @@ main {
   display: grid;
   grid-template-columns: 58% 40%;
   gap: 3em;
-  padding-top: 4em;
+  padding-top: 3em;
 }
 
 .text-part {
@@ -105,7 +105,7 @@ p {
 }
 
 .mockup img {
-  width: 100%;
+  width: 97%;
 }
 
 footer {
@@ -113,6 +113,7 @@ footer {
   align-self: self-end;
   justify-self: flex-end;
   gap: 1em;
+  padding-bottom: 2em;
 }
 
 footer > * {
